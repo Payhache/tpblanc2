@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "titre": "Mon premier message",
+      "auteur": "Pierre-Henri",
+      "message": "lorem gjjd dj f oe ùjdfjùoi s jdjùkùd fù ùsjf kdjf sùf",
+      "img": "typicode"
+    },
+    {
+      "id": 2,
+      "titre": "Mon deuxieme message",
+      "auteur": "Simon",
+      "message": " sd jds sdj fjjfejjeejj f sdl fz* l*k sd s*df kje * *sl fdj*",
+      "img": "typicode"
+    }
+
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
