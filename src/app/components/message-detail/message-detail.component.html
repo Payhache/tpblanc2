@@ -3,6 +3,9 @@
 <h1>{{message.titre}}</h1>
 <p>{{message.message}}</p>
 <h2>{{message.auteur}}</h2>
+
+
+<button class="btn btn-primary" [routerLink]="['/message/update', message.id]"> Editer le message</button>
 </div>
 
 <!-- S'affiche si le serveur ne réagit pas assez vite -->

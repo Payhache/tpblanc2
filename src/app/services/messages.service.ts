@@ -38,6 +38,12 @@ addMessage(message: Message): Observable<Message> {
     .post<Message>(this.apiURL, message, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
 }
+// Edition du message 
+editMessage(message: Message): Observable<Message> {
+  return this.http
+    .put<Message>(this.apiURL + '/' + message.id, message, this.httpOptions)
+    .pipe(retry(1), catchError(this.handleError));
+}
 
 
   // EN cas d'erreure de communication avec le serveur
