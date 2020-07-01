@@ -17,7 +17,7 @@ export class MessagesService {
 
   constructor(private http:HttpClient) {
    }
-     // Selection de toutes les voitures contenus dans le tableau Voiture JSON
+// Selection de tous les messages contenus dans le tableau Voiture JSON
   getAllMessages(): Observable<Message[]> {
     return this.http
       .get<Message[]>(this.apiURL)
@@ -32,6 +32,7 @@ export class MessagesService {
     catchError(this.handleError)
     );
   }
+  
 // Creation d'un message 
 addMessage(message: Message): Observable<Message> {
   return this.http

@@ -6,8 +6,19 @@
 
 
 <button class="btn btn-primary" [routerLink]="['/message/update', message.id]"> Editer le message</button>
-<button class="btn btn-primary" (click)="deleteMessage(message.id)"> Supprimer le message </button>
+
+
+<button type="button" class="btn btn-alert" (click)="openModal(template)"> Supprimer le message</button>
+<br><br>
+<ng-template #template>
+    <div class="modal-body text-center">
+        <p> Supprimer le message ?</p>
+        <button type="button" class="btn btn-default" (click)="deleteMessage(message.id)" >Yes</button>
+        <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+    </div>
+</ng-template>
 </div>
+
 
 <!-- S'affiche si le serveur ne réagit pas assez vite -->
 <div *ngIf="isLoading">

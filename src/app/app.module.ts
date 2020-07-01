@@ -12,7 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MessageDetailComponent } from './components/message-detail/message-detail.component';
 import { MessageCreateComponent } from './components/message-create/message-create.component';
 import { MessageEditComponent } from './components/message-edit/message-edit.component';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import { MessageEditComponent } from './components/message-edit/message-edit.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ModalModule.forRoot(),
     HttpClientModule,
     FormsModule
   ],

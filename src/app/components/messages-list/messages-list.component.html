@@ -1,8 +1,12 @@
-<div class="card" style="width: 18rem;">
+<div *ngIf="!isLoading"class="card" style="width: 18rem;">
     <div class="card-body" *ngFor="let message of this.messages">
       <h5 class="card-title">{{message.titre}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{message.auteur}}</h6>
       <p class="card-text"> {{message.message}}</p>
       <button [routerLink]="['/message', message.id]" class="card-link btn"> ouvre moi ;) </button>
     </div>
+  </div>
+
+  <div *ngIf="isLoading">
+    <span>En chargement .... </span>
   </div>
