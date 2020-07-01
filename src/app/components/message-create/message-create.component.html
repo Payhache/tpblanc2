@@ -1,0 +1,30 @@
+<div class="container">
+    <h1> Entre ton message !</h1>
+    <form #messageForm="ngForm" (ngSubmit)="submitMessage()">
+    
+        <label for="titre"> Sujet de ton message</label>
+        <input type="text" class="form-control" id="titre" name="titre" required [(ngModel)]="message.titre" #titreValidation="ngModel">
+        <div [hidden]="titreValidation.valid"message.titre
+            class="alert alert-danger">
+            N'oublie pas de mettre un sujet !
+        </div>
+        <label for="message">Rédige ton message</label>
+        <input type="textarea" class="form-control" id="message" name="message" required [(ngModel)]="message.message" #messageValidation="ngModel">
+        <div [hidden]="messageValidation.valid"
+            class="alert alert-danger">
+            vous devez remplir votre message 
+        </div>
+
+
+        <label for="auteur">Signe on te dit !</label>
+        <input type="text" class="form-control" id="auteur" name="auteur" required [(ngModel)]="message.auteur" #auteurValidation="ngModel">
+        <div [hidden]="auteurValidation.valid"
+            class="alert alert-danger">
+            Le message ne dois pas être anonyme !
+        </div>
+    
+        <input type="submit" [disabled]="!messageForm.valid">
+    </form>
+
+</div>
+

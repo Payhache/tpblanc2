@@ -1,6 +1,7 @@
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MessagesListComponent } from './components/messages-list/messages-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { MessageDetailComponent } from './components/message-detail/message-detail.component';
+import { MessageCreateComponent } from './components/message-create/message-create.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { MessageDetailComponent } from './components/message-detail/message-deta
     MenuComponent,
     MessagesListComponent,
     HomeComponent,
-    MessageDetailComponent
+    MessageDetailComponent,
+    MessageCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

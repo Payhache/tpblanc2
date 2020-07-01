@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MessagesService } from 'src/app/services/messages.service';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { Message } from 'src/app/models/message';
 
 @Component({
   selector: 'app-message-detail',

@@ -1,1 +1,12 @@
-<p>message-detail works!</p>
+<div *ngIf="!isLoading">
+
+<h1>{{message.titre}}</h1>
+<p>{{message.message}}</p>
+<h2>{{message.auteur}}</h2>
+</div>
+
+<!-- S'affiche si le serveur ne réagit pas assez vite -->
+<div *ngIf="isLoading">
+    <span>En chargement ....</span>
+</div>
+

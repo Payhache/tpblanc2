@@ -32,6 +32,12 @@ export class MessagesService {
     catchError(this.handleError)
     );
   }
+// Creation d'un message 
+addMessage(message: Message): Observable<Message> {
+  return this.http
+    .post<Message>(this.apiURL, message, this.httpOptions)
+    .pipe(retry(1), catchError(this.handleError));
+}
 
 
   // EN cas d'erreure de communication avec le serveur
