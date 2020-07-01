@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "TPBLANC2"
+  "defaultProject": "TPBLANC2",
+  "cli": {
+    "analytics": false
+  }
 }

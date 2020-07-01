@@ -2,9 +2,9 @@
   "messages": [
     {
       "id": 1,
-      "titre": "Mon premier message",
+      "titre": "Mon premier message d'amour",
       "auteur": "Pierre-Henri",
-      "message": "lorem gjjd dj f oe ùjdfjùoi s jdjùkùd fù ùsjf kdjf sùf",
+      "message": "bien joué ca marche :D héhé",
       "img": "typicode"
     },
     {
@@ -13,20 +13,6 @@
       "auteur": "Simon",
       "message": " sd jds sdj fjjfejjeejj f sdl fz* l*k sd s*df kje * *sl fdj*",
       "img": "typicode"
-    },
-    {
-      "id": 3,
-      "auteur": "sdf",
-      "titre": "dsf",
-      "message": "dsf",
-      "img": null
-    },
-    {
-      "id": 4,
-      "auteur": "dfgdfg",
-      "titre": "fdgdg",
-      "message": "fgdfg",
-      "img": null
     }
   ],
   "comments": [

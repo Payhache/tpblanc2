@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessagesService } from 'src/app/services/messages.service';
 import { Message } from 'src/app/models/message';
 
@@ -11,8 +11,9 @@ import { Message } from 'src/app/models/message';
 export class MessageDetailComponent implements OnInit {
   isLoading:boolean;
   message:Message;
+  messages:Message[];
 
-  constructor(private route: ActivatedRoute, private messageService:MessagesService) { }
+  constructor(private route: ActivatedRoute, private messageService:MessagesService, private router:Router) { }
 
   ngOnInit(): void {
     this.isLoading = true;
@@ -21,7 +22,15 @@ export class MessageDetailComponent implements OnInit {
       this.message = data;
       this.isLoading = false;
     });
-
+    
   }
-
+  deleteMessage(id:number) {
+    this.messageService.deleteMessage(id).subscribe(then => {
+      this.messageService.getAllMessages().subscribe((data: Message[]) => {
+        this.messages = data;
+        this.router.navigate(['/home']);
+        this.isLoading = false;
+      });
+    });
+  }
 }

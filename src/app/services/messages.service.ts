@@ -24,7 +24,7 @@ export class MessagesService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
-  // Selection d'une seule voiture par l'id
+  // Selection d'un seul message par l'id
   getOneMessage(id:number): Observable<Message> {
     return this.http.get<Message>(this.apiURL + '/' + id)
     .pipe(
@@ -44,7 +44,11 @@ editMessage(message: Message): Observable<Message> {
     .put<Message>(this.apiURL + '/' + message.id, message, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
 }
-
+// Suppression d'un message
+deleteMessage(id:number): Observable<Message> {
+  return this.http
+  .delete<Message>(this.apiURL + '/' + id,this.httpOptions).pipe(retry(1), catchError(this.handleError));
+}
 
   // EN cas d'erreure de communication avec le serveur
   handleError(error) {

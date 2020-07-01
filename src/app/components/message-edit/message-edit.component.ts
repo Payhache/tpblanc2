@@ -26,7 +26,7 @@ export class MessageEditComponent implements OnInit {
   }
   editMessage() {
     this.messageService.editMessage(this.message).subscribe((then) => {
-      this.router.navigate(['/messages']);
+      this.router.navigate(['/home']);
     });
   }
 }
